@@ -7,7 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.4</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath />
 	</parent>
 	<groupId>com.eazybytes</groupId>
 	<artifactId>cards</artifactId>
@@ -70,6 +70,16 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.2</version>
+				<configuration>
+					<to>
+						<image>mohamemedammar/${project.artifactId}:s4</image>
+					</to>
 				</configuration>
 			</plugin>
 		</plugins>
